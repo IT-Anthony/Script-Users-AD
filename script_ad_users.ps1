@@ -24,7 +24,8 @@ foreach ($User in $CalcAD)
        }
        else {
 
-              # Sinon on créer l'utilisateur
+              # Sinon on créer l'utilisateur. Bien prendre soin de modifier le nom de domaine 
+              # ici avant d'exécuter le script !
             New-ADUser `
             -SamAccountName $Username `
             -UserPrincipalName "$Username@notamax.local" `
