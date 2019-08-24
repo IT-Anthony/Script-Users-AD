@@ -1,7 +1,8 @@
-##############################################
-#            Mairien Anthony, 2019           #
-#          Création Users AD via Calc        #
-##############################################
+###############################################
+#            Mairien Anthony, 2019            #
+#     Script de création Users AD via Calc    #
+# Librement repris de celui de Thomas Limpens #
+###############################################
 
 # On utilise le module Import-csv sur notre calc pour en faire une variable
 $CalcAD = Import-csv C:\scripts\newusers.csv
