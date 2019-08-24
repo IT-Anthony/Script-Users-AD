@@ -5,16 +5,16 @@
 ###############################################
 
 # On utilise le module Import-csv sur notre calc pour en faire une variable
-$CalcAD = Import-csv C:\scripts\newusers.csv
+$CalcAD = Import-csv C:\Scripts\Calc_powershell_script.csv
 
 # Boucle foreach 
 foreach ($User in $CalcAD)
 {
        $Username    = $User.username
        $Password    = $User.password
-       $Firstname   = $User.firstname
-       $Lastname    = $User.lastname
-       $OU          = $User.ou
+       $Prenom      = $User.firstname
+       $Nom         = $User.lastname
+       $Groupe      = $User.ou
 
        # On vérifie si l'utilisateur n'existe pas déjà dans le domaine
        if (Get-ADUser -F {SamAccountName -eq $Username}) {
