@@ -12,6 +12,8 @@ Simple petit script Powershell permettant de créer des utilisateurs dans un Act
 
 ➡ Placer le fichier CSV dans un dossier nommé "C:\Windows\Scripts\"
 
+➡ Éditer la partie du script relative au nom de domaine (-UserPrincipalName "$Username@notamax.local")
+
 ➡ Exécuter le script, et prendre une tasse de café avec le temps économisé
 
 
