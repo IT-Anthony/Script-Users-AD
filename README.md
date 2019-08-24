@@ -5,9 +5,13 @@ Simple petit script Powershell permettant de créer des utilisateurs dans un Act
 ✅ Testé sous Windows Server 2012, 2012 R2, et 2016
 
 ➡ Télécharger le script
+
 ➡ Télécharger l'exemple de fichier CSV
+
 ➡ Éditer le fichier CSV en rajoutant les différents utilisateurs (veillez à bien avoir créé les groupes utilisateurs avant !)
+
 ➡ Placer le fichier CSV dans un dossier nommé "C:\Windows\Scripts\"
+
 ➡ Exécuter le script, et prendre une tasse de café avec le temps économisé
 
 
