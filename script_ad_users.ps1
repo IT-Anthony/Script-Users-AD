@@ -33,7 +33,7 @@ foreach ($User in $CalcAD)
             -Surname $Lastname `
             -Enabled $True `
             -ChangePasswordAtLogon $True `
-            -DisplayName "$Lastname, $Firstname" `
+            -DisplayName "$Lastname, $Firstname" ` 
             -Department $Department `
             -Path $OU `
             -AccountPassword (convertto-securestring $Password -AsPlainText -Force)
