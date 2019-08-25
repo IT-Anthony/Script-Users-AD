@@ -26,16 +26,7 @@ foreach ($User in $CalcAD)
 
               # Sinon on créer l'utilisateur. Bien prendre soin de modifier le nom de domaine 
               # ici avant d'exécuter le script !
-            New-ADUser `
-            -SamAccountName $Username `
-            -UserPrincipalName "$Username@notamax.local" `
-            -Name "$Firstname $Lastname" `
-            -GivenName $Firstname `
-            -Surname $Lastname `
-            -Enabled $True `
-            -DisplayName "$Lastname, $Firstname" ` 
-            -Path $OU `
-            -AccountPassword (convertto-securestring $Password -AsPlainText -Force)
+              New-ADUser -SamAccountName $Username -UserPrincipalName "$Username@notamax.local" -Name "$Prenom $Nom" -GivenName $Prenom -Surname $Nom -Enabled $True -DisplayName "$Nom, $Prenom" -Path $Groupe -AccountPassword (convertto-securestring $Password -AsPlainText -Force)
 
        }
 }
