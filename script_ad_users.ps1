@@ -4,8 +4,11 @@
 # Librement repris de celui de Thomas Limpens #
 ###############################################
 
+# On importe le module Active Directory
+Import-Module ActiveDirectory
+
 # On utilise le module Import-csv sur notre calc pour en faire une variable
-$CalcAD = Import-csv  -Delimiter ";" -Path C:\Scripts\Calc_powershell_script.csv
+$CalcAD = Import-csv  -Delimiter "," -Path C:\Scripts\Calc_powershell_script.csv
 
 # Boucle foreach 
 foreach ($User in $CalcAD)
@@ -14,7 +17,8 @@ foreach ($User in $CalcAD)
        $Password    = $User.password
        $Prenom      = $User.firstname
        $Nom         = $User.lastname
-       $Groupe      = $User.OU
+       $Groupe      = "OU=$($CalcAD.Groupe),DC=notamax,DC=local"         
+
 
        # On vérifie si l'utilisateur n'existe pas déjà dans le domaine
        if (Get-ADUser -F {SamAccountName -eq $Username}) {
